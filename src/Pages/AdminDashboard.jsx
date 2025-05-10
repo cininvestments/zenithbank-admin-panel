@@ -66,7 +66,9 @@ export default function AdminDashboard() {
       "Cancel",
       function okCb() {
         axios
-          .delete(`http://localhost:5000/api/admin/delete-user-by-id/${userId}`)
+          .delete(
+            `https://zenithbank-backend.onrender.com/api/admin/delete-user-by-id/${userId}`
+          )
           .then(() => {
             Notiflix.Notify.success("User deleted successfully.");
             setUsers((prev) => prev.filter((user) => user._id !== userId));

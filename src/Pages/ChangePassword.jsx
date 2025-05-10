@@ -27,7 +27,7 @@ const ChangePassword = () => {
   const checkEmailExists = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/admin/check-email",
+        "https://zenithbank-backend.onrender.com/api/admin/check-email",
         { email }
       );
       setEmailValid(res.data.exists);
@@ -45,7 +45,7 @@ const ChangePassword = () => {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/admin/change-password-email-only",
+        "https://zenithbank-backend.onrender.com/api/admin/change-password-email-only",
         {
           email,
           newPassword,
