@@ -1,0 +1,277 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Layout */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #1e293b;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.sidebar nav a:hover {
+  color: #fff;
+}
+
+/* Main */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.main-content header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.main-content header input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Table */
+.user-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.user-table th,
+.user-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-actions .cancel {
+  background: #e11d48;
+  color: white;
+}
+
+/* Enhanced Responsive Design for Small Screens */
+@media (max-width: 988px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .sidebar h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .sidebar nav a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #334155;
+    border-radius: 6px;
+    word-break: break-word;
+    text-align: center;
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .main-content {
+    padding: 0.8rem;
+  }
+
+  .main-content header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .main-content header h1 {
+    font-size: 1rem;
+  }
+
+  .search-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .user-table table,
+  .user-table thead,
+  .user-table tbody,
+  .user-table th,
+  .user-table td,
+  .user-table tr {
+    display: block;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .user-table thead {
+    display: none;
+  }
+
+  .user-table tr {
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0.8rem;
+    background: #fff;
+    border-radius: 6px;
+  }
+
+  .user-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+
+  .edit-btn,
+  .inline-btn {
+    width: 100%;
+    font-size: 0.5rem;
+    padding: 0.4rem;
+    margin-top: 0.4rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+  }
+}
+
+/* Ultra-small screens under 300px */
+@media (max-width: 300px) {
+  .sidebar nav a,
+  .edit-btn,
+  .inline-btn {
+    font-size: 0.4rem;
+    padding: 0.3rem 0.6rem;
+    flex: 1 1 100%;
+  }
+
+  .main-content header h1 {
+    font-size: 0.9rem;
+  }
+
+  .search-bar input {
+    font-size: 0.75rem;
+    padding: 0.3rem;
+  }
+
+  .user-table td {
+    font-size: 0.75rem;
+  }
+}

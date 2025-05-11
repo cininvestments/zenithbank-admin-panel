@@ -1,0 +1,153 @@
+.transaction-container {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    background: #f2f4f8;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .back-button .icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  
+  .back-button:hover {
+    color: #007bff;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transaction-table th,
+  .transaction-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .transaction-table th {
+    background: #f1f1f1;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .transaction-table td {
+    font-size: 15px;
+  }
+  
+  .status-dropdown {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .status-dropdown.pending {
+    background-color: #fff3e0;
+    color: #ff9800;
+  }
+  
+  .status-dropdown.completed {
+    background-color: #e8f5e9;
+    color: #4caf50;
+  }
+  
+  .status-dropdown.failed {
+    background-color: #ffebee;
+    color: #f44336;
+  }
+  
+  .delete-btn {
+    padding: 8px 10px;
+    background: #f44336;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background: #d32f2f;
+  }
+  
+  .loading,
+  .no-transactions {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 50px;
+  }
+  
+  .no-transactions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #999;
+  }
+  
+  .no-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  
+  @media (max-width: 768px) {
+    .transaction-container {
+      padding: 15px;
+    }
+  
+    .transaction-table th,
+    .transaction-table td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .back-button {
+      font-size: 14px;
+    }
+  
+    .table-wrapper {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .transaction-table th,
+    .transaction-table td {
+      font-size: 13px;
+      padding: 8px;
+    }
+  
+    .delete-btn {
+      font-size: 12px;
+      padding: 6px 8px;
+    }
+  
+    .back-button {
+      font-size: 13px;
+    }
+  }
+  

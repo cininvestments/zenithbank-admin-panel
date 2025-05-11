@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("/bgimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+}
+
+.login-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+}
+
+.login-logo img {
+  max-width: 80px;
+  height: auto;
+}
+
+.login-form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1d4ed8;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 0.8rem 2.5rem 0.8rem 2.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-icon svg {
+  position: absolute;
+  left: 10px;
+  color: #888;
+  font-size: 1rem;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 32px;
+  cursor: pointer;
+  color: #888;
+  font-size: 1rem;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.9rem;
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s ease;
+}
+
+.login-form button:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.login-form button.loading {
+  background: #1e3a8a;
+}
+
+.change-password-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.change-password-link a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 1.5rem;
+  }
+
+  .login-logo {
+    top: 10px;
+    right: 10px;
+  }
+
+  .login-logo img {
+    max-width: 60px;
+  }
+
+  input,
+  button {
+    font-size: 1rem;
+  }
+
+  input:focus {
+    font-size: 1rem;
+  }
+}
+
+/* Prevent zoom on mobile for inputs */
+input,
+select,
+textarea {
+  font-size: 16px !important;
+}
